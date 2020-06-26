@@ -237,11 +237,8 @@ func getPost(w http.ResponseWriter, r *http.Request) {
 
 	var trips []Mtrips
 
-	TripID := r.FormValue("tripID")
-	DepartureDate := r.FormValue("departureDate")
-	ReturnDate := r.FormValue("returnDate")
-	Origin := r.FormValue("origin")
-	Destination := r.FormValue("destination")
+	tripID := r.FormValue("tripID")
+	destination := r.FormValue("destination")
 
 	sql := `SELECT
 				TripID,
@@ -275,9 +272,9 @@ func getPost(w http.ResponseWriter, r *http.Request) {
 				IFNULL(TripleType,'') TripleType,
 				IFNULL(QuadType,'') QuadType,
 				IFNULL(PromoStatus,'') PromoStatus
-			FROM m_trips WHERE TripID = ?, DepartureDate = ?, ReturnDate = ?, Origin = ?, Destination = ?`
+			FROM m_trips WHERE TripID = ? AND Destination = ?`
 
-	result, err := db.Query(sql, TripID, DepartureDate, ReturnDate, Origin, Destination)
+	result, err := db.Query(sql, tripID, destination)
 
 	if err != nil {
 		panic(err.Error())

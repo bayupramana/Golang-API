@@ -1,0 +1,303 @@
+{
+	"info": {
+		"_postman_id": "b39835d5-20be-4341-b45a-0db74029d14b",
+		"name": "M Trips",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Insert Trip",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "tripID",
+							"value": "12345",
+							"type": "text"
+						},
+						{
+							"key": "travelType",
+							"value": "Bus",
+							"type": "text"
+						},
+						{
+							"key": "travelID",
+							"value": "6789",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Jemput di hotel",
+							"type": "text"
+						},
+						{
+							"key": "departureDate",
+							"value": "20-06-2020",
+							"type": "text"
+						},
+						{
+							"key": "returnDate",
+							"value": "21-06-2020",
+							"type": "text"
+						},
+						{
+							"key": "duration",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "origin",
+							"value": "JKT",
+							"type": "text"
+						},
+						{
+							"key": "destination",
+							"value": "BDO",
+							"type": "text"
+						},
+						{
+							"key": "transit",
+							"value": "tidak ada",
+							"type": "text"
+						},
+						{
+							"key": "detailTransit",
+							"value": "tidak ada",
+							"type": "text"
+						},
+						{
+							"key": "hotelName",
+							"value": "Bandung Hotel",
+							"type": "text"
+						},
+						{
+							"key": "hotelRating",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "detailHotel",
+							"value": "hotel bagus",
+							"type": "text"
+						},
+						{
+							"key": "currency",
+							"value": "JKT",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "5000000",
+							"type": "text"
+						},
+						{
+							"key": "promoCode",
+							"value": "0000",
+							"type": "text"
+						},
+						{
+							"key": "promoDescription",
+							"value": "tidak ada",
+							"type": "text"
+						},
+						{
+							"key": "airlinesID",
+							"value": "10101",
+							"type": "text"
+						},
+						{
+							"key": "goods",
+							"value": "mantap",
+							"type": "text"
+						},
+						{
+							"key": "termCondition",
+							"value": "baik baik",
+							"type": "text"
+						},
+						{
+							"key": "tripType",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "quota",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "tripStatus",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "statusID",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "lat",
+							"value": "300000",
+							"type": "text"
+						},
+						{
+							"key": "long",
+							"value": "400000",
+							"type": "text"
+						},
+						{
+							"key": "doubleType",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "tripleType",
+							"value": "34",
+							"type": "text"
+						},
+						{
+							"key": "quadType",
+							"value": "56",
+							"type": "text"
+						},
+						{
+							"key": "promoStatus",
+							"value": "oke",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/mtrips",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mtrips"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Trips",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/mtrips",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mtrips"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/mtrips/12345",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mtrips",
+						"12345"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit ",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "description",
+							"value": "batal ke bandung",
+							"type": "text"
+						},
+						{
+							"key": "departureDate",
+							"value": "2020-06-27",
+							"type": "text"
+						},
+						{
+							"key": "returnDate",
+							"value": "2020-06-30",
+							"type": "text"
+						},
+						{
+							"key": "transit",
+							"value": "YK",
+							"type": "text"
+						},
+						{
+							"key": "detailTransit",
+							"value": "jenguk ortu",
+							"type": "text"
+						},
+						{
+							"key": "hotelName",
+							"value": "Buah Batu",
+							"type": "text"
+						},
+						{
+							"key": "detailHotel",
+							"value": "DI kanan jalan",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/mtrips/12345",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mtrips",
+						"12345"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Trips",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/mtrips/12347",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mtrips",
+						"12347"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
