@@ -237,8 +237,8 @@ func getPost(w http.ResponseWriter, r *http.Request) {
 
 	var trips []Mtrips
 
-	tripID := r.FormValue("tripID")
-	destination := r.FormValue("destination")
+	TripID := r.FormValue("tripID")
+	Destination := r.FormValue("destination")
 
 	sql := `SELECT
 				TripID,
@@ -274,7 +274,7 @@ func getPost(w http.ResponseWriter, r *http.Request) {
 				IFNULL(PromoStatus,'') PromoStatus
 			FROM m_trips WHERE TripID = ? AND Destination = ?`
 
-	result, err := db.Query(sql, tripID, destination)
+	result, err := db.Query(sql, TripID, Destination)
 
 	if err != nil {
 		panic(err.Error())
