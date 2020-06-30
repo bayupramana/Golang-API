@@ -15,37 +15,37 @@
 					"formdata": [
 						{
 							"key": "tripID",
-							"value": "12345",
+							"value": "123",
 							"type": "text"
 						},
 						{
 							"key": "travelType",
-							"value": "Bus",
+							"value": "Group",
 							"type": "text"
 						},
 						{
 							"key": "travelID",
-							"value": "6789",
+							"value": "A001",
 							"type": "text"
 						},
 						{
 							"key": "description",
-							"value": "Jemput di hotel",
+							"value": "Study Tour ke Yogya",
 							"type": "text"
 						},
 						{
 							"key": "departureDate",
-							"value": "20-06-2020",
+							"value": "2020-06-30",
 							"type": "text"
 						},
 						{
 							"key": "returnDate",
-							"value": "21-06-2020",
+							"value": "2020-07-05",
 							"type": "text"
 						},
 						{
 							"key": "duration",
-							"value": "2",
+							"value": "5",
 							"type": "text"
 						},
 						{
@@ -55,7 +55,7 @@
 						},
 						{
 							"key": "destination",
-							"value": "BDO",
+							"value": "YK",
 							"type": "text"
 						},
 						{
@@ -70,7 +70,7 @@
 						},
 						{
 							"key": "hotelName",
-							"value": "Bandung Hotel",
+							"value": "Reddorz",
 							"type": "text"
 						},
 						{
@@ -80,7 +80,7 @@
 						},
 						{
 							"key": "detailHotel",
-							"value": "hotel bagus",
+							"value": "Hotel di Jalan Malioboro",
 							"type": "text"
 						},
 						{
@@ -90,7 +90,7 @@
 						},
 						{
 							"key": "price",
-							"value": "5000000",
+							"value": "2500000",
 							"type": "text"
 						},
 						{
@@ -105,7 +105,7 @@
 						},
 						{
 							"key": "airlinesID",
-							"value": "10101",
+							"value": "A001",
 							"type": "text"
 						},
 						{
@@ -120,12 +120,12 @@
 						},
 						{
 							"key": "tripType",
-							"value": "2",
+							"value": "3",
 							"type": "text"
 						},
 						{
 							"key": "quota",
-							"value": "2",
+							"value": "3",
 							"type": "text"
 						},
 						{
@@ -293,6 +293,40 @@
 					"path": [
 						"mtrips",
 						"12347"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "tripID",
+							"value": "4567",
+							"type": "text"
+						},
+						{
+							"key": "destination",
+							"value": "BDO",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/mtrips/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mtrips",
+						""
 					]
 				}
 			},
