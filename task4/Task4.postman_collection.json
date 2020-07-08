@@ -1,0 +1,54 @@
+{
+	"info": {
+		"_postman_id": "6d71c1d4-89fb-4785-bc29-37d093f2f980",
+		"name": "Task4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "insert JSON 1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"id\": 157538,\r\n      \"date\": \"2017-07-21T10:30:34\",\r\n      \"date_gmt\": \"2017-07-21T17:30:34\",\r\n      \"guid\": {\r\n          \"rendered\": \"https://www.sitepoint.com/?p=157538\"\r\n      },\r\n      \"modified\": \"2017-07-23T21:56:35\",\r\n      \"modified_gmt\": \"2017-07-24T04:56:35\",\r\n      \"slug\": \"why-the-iot-threatens-your-wordpress-site-and-how-to-fix-it\",\r\n      \"status\": \"publish\",\r\n      \"type\": \"post\",\r\n      \"link\": \"https://www.sitepoint.com/why-the-iot-threatens-your-wordpress-site-and-how-to-fix-it/\",\r\n      \"title\": {\r\n          \"rendered\": \"Why the IoT Threatens Your WordPress Site (and How to Fix It)\"\r\n      }\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8181/journals",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"journals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insert JSON 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"name\":\"Molecule Man\",\r\n   \"age\":29,\r\n   \"secretIdentity\":\"Dan Jukes\",\r\n   \"powers\":{\r\n      \"Task1\":\"Radiation resistance\",\r\n      \"Task2\":\"Turning tiny\",\r\n      \"Task3\":\"Radiation blast\"\r\n   },\r\n   \"errors\":{\r\n      \"status\":\"422\",\r\n      \"source\":{\r\n         \"pointer\":\"/data/attributes/firstName\"\r\n      },\r\n      \"title\":\"Invalid Attribute\",\r\n      \"detail\":\"First name must contain at least three characters.\"\r\n   }\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8181/scientist",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"scientist"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
