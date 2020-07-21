@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 08 Jul 2020 pada 15.36
+-- Waktu pembuatan: 21 Jul 2020 pada 15.18
 -- Versi server: 10.4.11-MariaDB
 -- Versi PHP: 7.2.30
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `taskiv`
+-- Database: `json`
 --
 
 -- --------------------------------------------------------
@@ -46,6 +46,7 @@ CREATE TABLE `jurnal` (
 --
 
 INSERT INTO `jurnal` (`id`, `date`, `date_gmt`, `website`, `modified`, `modified_gmt`, `slug`, `status`, `type`, `link`, `title`) VALUES
+(123, '2017-07-21 10:30:34', '2017-07-21 17:30:34', 'https://www.sidomuncul.com/?p=157538', '2017-07-08 12:31:00', '2017-07-24 04:56:35', 'IOT is the best', 'publish', 'post', 'https://www.sitepoint.com/why-the-iot-threatens-your-wordpress-site-and-how-to-fix-it/', 'Why the IoT Threatens Your WordPress Site (and How to Fix It)'),
 (157538, '2017-07-21 10:30:34', '2017-07-21 17:30:34', 'https://www.sitepoint.com/?p=157538', '0000-00-00 00:00:00', '2017-07-23 21:56:35', '2017-07-24T04:56:35', 'why-the-iot-threatens-your-wordpress-site-and-how-to-fix-it', 'publish', 'Why the IoT Threatens Your WordPress Site (and How to Fix It)', 'post'),
 (157539, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '', '', '', '', '');
 

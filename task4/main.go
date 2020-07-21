@@ -69,7 +69,7 @@ func inssertJurnal(w http.ResponseWriter, r *http.Request) {
 		panic(err.Error())
 	}
 
-	_, err = stmt.Exec(jnl.ID, jnl.Date, jnl.DateGmt, jnl.GUID.Rendered, jnl.Link, jnl.Modified, jnl.ModifiedGmt, jnl.Slug, jnl.Status, jnl.Title.Rendered, jnl.Type)
+	_, err = stmt.Exec(jnl.ID, jnl.Date, jnl.DateGmt, jnl.GUID.Rendered, jnl.Modified, jnl.ModifiedGmt, jnl.Slug, jnl.Status, jnl.Type, jnl.Link, jnl.Title.Rendered)
 
 	if err != nil {
 		panic(err.Error())
@@ -106,7 +106,7 @@ func insertScientist(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 
-	db, err = sql.Open("mysql", "root:@tcp(127.0.0.1:3306)/taskiv")
+	db, err = sql.Open("mysql", "root:@tcp(127.0.0.1:3306)/json")
 	if err != nil {
 		panic(err.Error())
 	}
