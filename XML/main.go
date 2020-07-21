@@ -86,7 +86,19 @@ func getCustomers(w http.ResponseWriter, r *http.Request) {
 			panic(err.Error())
 		}
 
-		_, err = stmt.Exec(request.Customers.Customer[j].CustomerID, request.Customers.Customer[j].CompanyName, request.Customers.Customer[j].ContactName, request.Customers.Customer[j].ContactTitle, request.Customers.Customer[j].Phone, request.Customers.Customer[j].Fax, request.Customers.Customer[j].FullAddress.Address, request.Customers.Customer[j].FullAddress.City, request.Customers.Customer[j].FullAddress.Country, request.Customers.Customer[j].FullAddress.PostalCode, request.Customers.Customer[j].FullAddress.Region)
+		customerID := request.Customers.Customer[j].CustomerID
+		companyName := request.Customers.Customer[j].CompanyName
+		contactName := request.Customers.Customer[j].ContactName
+		contactTitle := request.Customers.Customer[j].ContactTitle
+		phone := request.Customers.Customer[j].Phone
+		fax := request.Customers.Customer[j].Fax
+		address := request.Customers.Customer[j].FullAddress.Address
+		city := request.Customers.Customer[j].FullAddress.City
+		country := request.Customers.Customer[j].FullAddress.Country
+		postalCode := request.Customers.Customer[j].FullAddress.PostalCode
+		region := request.Customers.Customer[j].FullAddress.Region
+
+		_, err = stmt.Exec(customerID, companyName, contactName, contactTitle, phone, fax, address, city, country, postalCode, region)
 
 		if err != nil {
 			panic(err.Error())
@@ -103,7 +115,21 @@ func getCustomers(w http.ResponseWriter, r *http.Request) {
 			panic(err.Error())
 		}
 
-		_, err = stmt.Exec(request.Orders.Order[ord].CustomerID, request.Orders.Order[ord].EmployeeID, request.Orders.Order[ord].OrderDate, request.Orders.Order[ord].RequiredDate, request.Orders.Order[ord].ShipInfo.Freight, request.Orders.Order[ord].ShipInfo.ShipAddress, request.Orders.Order[ord].ShipInfo.ShipCity, request.Orders.Order[ord].ShipInfo.ShipCountry, request.Orders.Order[ord].ShipInfo.ShipName, request.Orders.Order[ord].ShipInfo.ShipPostalCode, request.Orders.Order[ord].ShipInfo.ShipRegion, request.Orders.Order[ord].ShipInfo.ShipVia, request.Orders.Order[ord].ShipInfo.ShippedDate)
+		customerID := request.Orders.Order[ord].CustomerID
+		emplyeeID := request.Orders.Order[ord].EmployeeID
+		orderDate := request.Orders.Order[ord].OrderDate
+		requiredDate := request.Orders.Order[ord].RequiredDate
+		freight := request.Orders.Order[ord].ShipInfo.Freight
+		shipAddress := request.Orders.Order[ord].ShipInfo.ShipAddress
+		shipCity := request.Orders.Order[ord].ShipInfo.ShipCity
+		shipCountry := request.Orders.Order[ord].ShipInfo.ShipCountry
+		shipName := request.Orders.Order[ord].ShipInfo.ShipName
+		shipPostalCode := request.Orders.Order[ord].ShipInfo.ShipPostalCode
+		shipRegion := request.Orders.Order[ord].ShipInfo.ShipRegion
+		shipVia := request.Orders.Order[ord].ShipInfo.ShipVia
+		shippedDate := request.Orders.Order[ord].ShipInfo.ShippedDate
+
+		_, err = stmt.Exec(customerID, emplyeeID, orderDate, requiredDate, shippedDate, shipVia, freight, shipName, shipAddress, shipCity, shipRegion, shipPostalCode, shipCountry)
 
 		if err != nil {
 			panic(err.Error())
